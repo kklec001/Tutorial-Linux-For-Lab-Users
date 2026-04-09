@@ -63,7 +63,12 @@ When you select "Remote Desktop Connection", you will be faced with two options:
 
 ### 2.1: XRDP - A Full Remote Desktop
 
-This is the most complex way to connect to a remote computer and it will give you full access to the user interface.
+This is the most complex way to connect to a remote computer and it will give you full access to the user interface. Ubuntu 24.04 and 25 should have XRDP enabled, but you can always install it manually to ensure the program will run with few to no issues.
+
+First, make sure you have XRDP installed.
+```py
+
+```
 
 ### 2.2: SSH - Command Line Connection
 
