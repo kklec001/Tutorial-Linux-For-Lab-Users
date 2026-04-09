@@ -51,3 +51,11 @@ This is the most complex way to connect to a remote computer and it will give yo
 This is the most minimal way to connect to a remote computer. This is useful for tansferring files or performing minimal tasks not requiring interactions with a user interface. Generally, you want to use XRDP if you want to perform work on the host computer.
 
 ## Subsection 3: Connect via a VPN or Enter your Local Network
+
+### Linux Users
+
+
+### Mac Users
+
+
+### Windows Users
