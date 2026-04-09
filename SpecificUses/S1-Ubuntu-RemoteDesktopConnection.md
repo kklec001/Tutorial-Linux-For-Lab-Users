@@ -29,6 +29,25 @@ As Ubuntu 24 and 25 gives you an easy interface, go to "Settings" followed by "N
 
 With these rules in place, you can proceed to installing or running your remote connection.
 
+### 1.3 Get your IP Address.
+
+You can do this multiple ways, but all of them are easy.
+
+1) Go to "settings" and either "Wifi" or "Network" and select the cog next to the connection you're interested in. Under "Details", you will see the IPV4 address you will use to connect.
+2) Via commandline, type
+   > ```py
+   > ip a
+   > ```
+   and locate the IP of the connection you will use.
+3) Using Net-Tools (more Advanced options). Via command line, type
+   > ```py
+   > sudo apt install net-tools
+   > ```
+   After install, run the following command:
+   > ```py
+   > ifconfig
+   > ```
+   and locate the IP of the connection you will use. You can also configure the connection using Net-Tools if you need something more specific.
 
 ## Subsection 2: Connecting to your Ubuntu Computer
 
