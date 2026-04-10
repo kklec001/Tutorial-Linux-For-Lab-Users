@@ -49,6 +49,8 @@ You can do this multiple ways, but all of them are easy.
    > ```
    and locate the IP of the connection you will use. You can also configure the connection using Net-Tools if you need something more specific.
 
+I would not recommend configuring connection via an internet connection without a VPN to place you within your home university's network. This is possible without a VPN, but it requires a static IP that is exposed to the internet (which is discouraged by the majority of universities).
+
 ## Subsection 2: Connecting to your Ubuntu Computer
 
 Remoting in to modern versions of Ubuntu 24.04 and 25 is surprisingly easy, and you can even perform these via the user interface.
@@ -65,10 +67,49 @@ When you select "Remote Desktop Connection", you will be faced with two options:
 
 This is the most complex way to connect to a remote computer and it will give you full access to the user interface. Ubuntu 24.04 and 25 should have XRDP enabled, but you can always install it manually to ensure the program will run with few to no issues.
 
+#### 2.1.1: XRDP
 First, make sure you have XRDP installed.
 ```py
-
+sudo apt update
+sudo apt install xrdp
 ```
+
+Ensure your packages are updated and upgraded.
+```py
+sudo apt full-upgrade
+sudo apt update
+```
+
+Then use systemd to turn on XRDP by default.
+```py
+sudo systemctl enable --now xrdp
+```
+If you don't do this, you'll need to manually turn on XRDP every time you reboot your PC. You can now connect to your Ubuntu PC.
+
+#### 2.1.2: Connect to your PC.
+
+##### Using Windows
+Search for "Remote Desktop Connection" on the "Home" menu (installed by default on Microslop) and open the program.
+Open "Show Options" to view "Advanced Configuration."
+
+At "Computer," enter your target IP address and port number. This should look something like
+> 00.00.00.00:3389            # Form <IPAddress>:<Port>
+with your IP address before the port you chose to connect via.
+
+Set your "User name" as the username you selected when enabling remote desktop connection. You will be prompted for a password - this is the password you MADE when you set up the remote connection, NOT your user password. You will see the login screen and can proceed to use the system as if you were logged in at the computer.
+
+##### Using Mac
+Download the "[Windows App](https://apps.apple.com/us/app/windows-app/id1295203466?mt=12)" app via the app store (made and provided by Microslop). Install and open the program. 
+Open "Show Options" to view "Advanced Configuration."
+
+At "Computer," enter your target IP address and port number. This should look something like
+> 00.00.00.00:3389            # Form <IPAddress>:<Port>
+with your IP address before the port you chose to connect via.
+
+Set your "User name" as the username you selected when enabling remote desktop connection. You will be prompted for a password - this is the password you MADE when you set up the remote connection, NOT your user password. You will see the login screen and can proceed to use the system as if you were logged in at the computer.
+
+##### Using Linux
+Check for or install [Remmina](https://remmina.org/). A more comprehensive tutorial can be found at [itsfoss](https://itsfoss.com/use-remmina/) which will help you configure more options while using Remmina. 
 
 ### 2.2: SSH - Command Line Connection
 
