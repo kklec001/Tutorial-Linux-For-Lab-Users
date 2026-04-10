@@ -92,9 +92,10 @@ If you don't do this, you'll need to manually turn on XRDP every time you reboot
 Search for "Remote Desktop Connection" on the "Home" menu (installed by default on Microslop) and open the program.
 Open "Show Options" to view "Advanced Configuration."
 
-At "Computer," enter your target IP address and port number. This should look something like <IPAddress>:<Port>
+At "Computer," enter your target IP address and port number. This should look something like IPAddress:Port
 > 00.00.00.00:3389            
-with your IP address before the port you chose to connect via.
+
+with your IP address before the port you chose to connect to.
 
 Set your "User name" as the username you selected when enabling remote desktop connection. You will be prompted for a password - this is the password you MADE when you set up the remote connection, NOT your user password. You will see the login screen and can proceed to use the system as if you were logged in at the computer.
 
