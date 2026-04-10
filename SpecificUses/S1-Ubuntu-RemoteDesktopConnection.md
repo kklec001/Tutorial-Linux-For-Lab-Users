@@ -103,9 +103,11 @@ Set your "User name" as the username you selected when enabling remote desktop c
 Download the "[Windows App](https://apps.apple.com/us/app/windows-app/id1295203466?mt=12)" app via the app store (made and provided by Microslop). Install and open the program. 
 Open "Show Options" to view "Advanced Configuration."
 
-At "Computer," enter your target IP address and port number. This should look something like
-> 00.00.00.00:3389            # Form <IPAddress>:<Port>
-with your IP address before the port you chose to connect via.
+At "Computer," enter your target IP address and port number. This should look something like IPAddress:Port
+> 00.00.00.00:3389            
+
+with your IP address before the port you chose to connect to.
+
 
 Set your "User name" as the username you selected when enabling remote desktop connection. You will be prompted for a password - this is the password you MADE when you set up the remote connection, NOT your user password. You will see the login screen and can proceed to use the system as if you were logged in at the computer.
 
